@@ -34,7 +34,7 @@ const Quotes = () => {
         <figcaption>{author}</figcaption>
       </figure>
       <button onClick={() => refetch()}>
-        <img src="/public/reload.svg" alt="reload" />
+        <img src="/reload.svg" alt="reload" />
       </button>
     </div>
   )
