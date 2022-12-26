@@ -6,7 +6,7 @@ export const dayOfYear = (today: Date) => {
     let firstDay = new Date(today.getFullYear(), 0);
 
     // Get the day of the year
-    let dayOfYear = Math.floor((today - firstDay) / 1000 / 60 / 60 / 24) + 1;
+    let dayOfYear = Math.floor((today - firstDay) / 1000 / 60 / 60 / 24) + 1; // eslint-disable-line no-alert
 
     return dayOfYear
 }

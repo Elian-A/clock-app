@@ -3,12 +3,14 @@ import { FC } from "react"
 interface Info {
     id: number,
     title: string,
-    data: string | Date | number
+    data: string | number
 }
 
-const Info: FC<{ key: number, info: Info }> = () => {
+const Info: FC<{ info: Info }> = ({ info }) => {
+    const { data, title } = info
     return (
         <div>
+            <p>{title}</p><p>{data}</p>
         </div>
     )
 }
