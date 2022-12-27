@@ -6,7 +6,7 @@ import Time from "../time/time";
 
 import { getIcon } from "./utils";
 
-import { useClock } from "../hooks/clock";
+import { useClock } from "../../hooks/clock";
 
 const Clock = () => {
   const { date, hours, minutes } = useClock();
