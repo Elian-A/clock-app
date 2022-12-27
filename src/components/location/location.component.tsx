@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getLocation } from "./api";
+import { getLocation } from "./location.api";
 
 const Location = () => {
   const { data, isLoading, isError } = useQuery("location", getLocation);

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Moon, Sun } from "../SVGs";
-import { greet } from "./utils";
+import { greet } from "./greeting.utils";
 
 const Greeting: FC<{ hours: number }> = ({ hours }) => {
   return (

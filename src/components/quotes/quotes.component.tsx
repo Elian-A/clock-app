@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getQuote } from "./api";
+import { getQuote } from "./quotes.api";
 import { Reload } from "../SVGs";
 
 const Quotes = () => {

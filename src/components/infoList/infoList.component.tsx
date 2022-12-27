@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Info from "../info/info";
-import { getInfoList } from "./utils";
+import Info from "../info/info.component";
+import { getInfoList } from "./infoList.utils";
 
 const InfoList: FC<{ date: Date }> = ({ date }) => {
   const infoList = getInfoList(date);

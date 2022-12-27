@@ -1,8 +1,8 @@
-import Greeting from "../greeting/greeting";
-import InfoButton from "../infoButton/infoButton";
-import InfoList from "../infoList/infoList";
-import Location from "../location/location";
-import Time from "../time/time";
+import Greeting from "../greeting/greeting.component";
+import InfoButton from "../infoButton/infoButton.component";
+import InfoList from "../infoList/infoList.component";
+import Location from "../location/location.component";
+import Time from "../time/time.component";
 
 import { useClock } from "../../hooks/clock";
 

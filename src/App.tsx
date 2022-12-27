@@ -1,5 +1,5 @@
-import Clock from "./components/clock/clock";
-import Quotes from "./components/quotes/quotes";
+import Clock from "./components/clock/clock.component";
+import Quotes from "./components/quotes/quotes.component";
 function App() {
   return (
     <main
