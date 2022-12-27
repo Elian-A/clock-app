@@ -14,7 +14,7 @@ const Clock = () => {
 
   return (
     <div>
-      <Greeting icon={icon} hours={hours} />
+      <Greeting hours={+hours} />
       <Time hours={hours} minutes={minutes} />
       <Location />
       <InfoButton />

@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { getQuote } from "./api";
-import Reload from "../reload/reload";
+import { Reload } from "../SVGs";
 
 const Quotes = () => {
   const { data, isLoading, isError, refetch } = useQuery("quote", getQuote, {
