@@ -13,10 +13,14 @@ const Quotes = () => {
   const { body: quote, author } = data;
 
   return (
-    <div className="w-[80%] mx-auto flex justify-between gap-2">
+    <div className="flex justify-between gap-2">
       <figure className="flex flex-col gap-2">
-        <blockquote className="font-serif text-white">{quote}</blockquote>
-        <figcaption className="font-sans text-white">{author}</figcaption>
+        <blockquote className="font-serif text-white text-lg">
+          {quote}
+        </blockquote>
+        <figcaption className="font-sans text-white text-lg">
+          {author}
+        </figcaption>
       </figure>
       <div className="grid items-center">
         <button onClick={() => refetch()} className="h-6 w-6 ">

@@ -10,11 +10,10 @@ const Location = () => {
   const { city, country_name: country, country_code: code } = data;
 
   return (
-    <div>
-      <p>
-        {`${country},`} {city ? city : code}
-      </p>
-    </div>
+    <p className="text-white text-xl tracking-widest font-sans font-bold uppercase flex gap-2">
+      <span>{`${country},`}</span>
+      <span>{city ? city : code}</span>
+    </p>
   );
 };
 
