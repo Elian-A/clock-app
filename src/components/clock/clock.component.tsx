@@ -11,11 +11,16 @@ const Clock: FC<{ infoState: boolean }> = ({ infoState }) => {
   const { date, hours, minutes } = useClock();
 
   return (
-    <div className={`flex flex-col gap-2`}>
-      <Greeting hours={+hours} />
-      <Time hours={hours} minutes={minutes} />
-      <Location />
-      <InfoButton />
+    <div>
+      <div
+        className={`flex flex-col gap-1
+      ${infoState ? "mb-7" : ""}`}
+      >
+        <Greeting hours={+hours} />
+        <Time hours={hours} minutes={minutes} />
+        <Location />
+        <InfoButton />
+      </div>
       {infoState ? <InfoList date={date} /> : null}
     </div>
   );
