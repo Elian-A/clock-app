@@ -4,21 +4,18 @@ import InfoList from "../infoList/infoList";
 import Location from "../location/location";
 import Time from "../time/time";
 
-import { getIcon } from "./utils";
-
 import { useClock } from "../../hooks/clock";
 
 const Clock = () => {
-  const { date, hours, minutes } = useClock();
-  const icon = getIcon(+hours);
+  const { hours, minutes } = useClock();
 
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <Greeting hours={+hours} />
       <Time hours={hours} minutes={minutes} />
       <Location />
-      <InfoButton />
-      <InfoList date={date} />
+      {/* <InfoButton />
+      <InfoList date={date} /> */}
     </div>
   );
 };
