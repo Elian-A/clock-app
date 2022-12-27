@@ -10,7 +10,7 @@ const InfoButton = () => {
       onClick={() => setInfoState(!infoState)}
       className="group cursor-pointer w-fit pr-2 pl-3 py-2
       border-none rounded-full bg-white flex gap-3 items-center
-      mt-12"
+      mt-6"
     >
       <span className="uppercase text-gray-600 text-sm tracking-widest font-bold ">
         More
