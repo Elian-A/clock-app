@@ -14,8 +14,8 @@ const Clock = () => {
       <Greeting hours={+hours} />
       <Time hours={hours} minutes={minutes} />
       <Location />
-      {/* <InfoButton />
-      <InfoList date={date} /> */}
+      <InfoButton />
+      {/* <InfoList date={date} /> */}
     </div>
   );
 };
