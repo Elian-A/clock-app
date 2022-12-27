@@ -1,12 +1,14 @@
 import { useQuery } from "react-query";
 import { getQuote } from "./api";
+import Reload from "../reload/reload";
 
 const Quotes = () => {
-  const { data, isLoading, error, refetch } = useQuery("quote", getQuote, {
+  const { data, isLoading, isError, refetch } = useQuery("quote", getQuote, {
     refetchOnWindowFocus: false,
   });
 
   if (!data || isLoading) return <p>loading...</p>;
+  if (isError) return <p>error...</p>;
 
   const { body: quote, author } = data;
 
@@ -16,9 +18,11 @@ const Quotes = () => {
         <blockquote>{quote}</blockquote>
         <figcaption>{author}</figcaption>
       </figure>
-      <button onClick={() => refetch()}>
-        <img src="/reload.svg" alt="reload" />
-      </button>
+      <div>
+        <button onClick={() => refetch()}>
+          <Reload />
+        </button>
+      </div>
     </div>
   );
 };

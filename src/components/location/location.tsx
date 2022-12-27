@@ -1,17 +1,21 @@
-import { useQuery } from "react-query"
-import { getLocation } from "./api"
-
+import { useQuery } from "react-query";
+import { getLocation } from "./api";
 
 const Location = () => {
-    const { data, isLoading, error } = useQuery('location', getLocation)
-    if (!data) return <p>loading</p>
-    const { city, country_name: country, country_code: code } = data
-    return (
-        <div>
+  const { data, isLoading, isError } = useQuery("location", getLocation);
 
-            <p>{`${country},`} {city ? city : code}</p>
-        </div>
-    )
-}
+  if (isLoading || !data) return <p>loading...</p>;
+  if (isError) return <p>error...</p>;
 
-export default Location
+  const { city, country_name: country, country_code: code } = data;
+
+  return (
+    <div>
+      <p>
+        {`${country},`} {city ? city : code}
+      </p>
+    </div>
+  );
+};
+
+export default Location;
