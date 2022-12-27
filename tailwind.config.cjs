@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        day: "url('/day-bg.jpg')",
+        night: "url('/night-bg.jpg')"
+      }
+    },
   },
   plugins: [],
 }

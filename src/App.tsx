@@ -1,14 +1,12 @@
-import Clock from "./components/clock/clock"
-import Quotes from "./components/quotes/quotes"
+import Clock from "./components/clock/clock";
+import Quotes from "./components/quotes/quotes";
 function App() {
   return (
-    <main>
-      <div>
-        <Quotes />
-        <Clock />
-      </div>
+    <main className="h-screen bg-day bg-[#7a7a7a] bg-blend-multiply bg-cover">
+      <Quotes />
+      <Clock />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
