@@ -7,7 +7,7 @@ import Time from "../time/time";
 import { useClock } from "../../hooks/clock";
 
 const Clock = () => {
-  const { hours, minutes } = useClock();
+  const { date, hours, minutes } = useClock();
 
   return (
     <div className="flex flex-col gap-2">
