@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useDebugValue, useEffect, useState } from "react";
 
 const formatTime = (date: Date) => {
   const hs = date.getHours();
@@ -19,6 +19,8 @@ export const useClock = () => {
     const intervalId = setInterval(() => setDate(new Date()), 5000);
     return () => clearInterval(intervalId);
   }, []);
+  
+  useDebugValue({date,hours,minutes})
 
   return {
     date,
