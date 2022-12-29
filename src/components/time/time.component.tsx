@@ -7,7 +7,6 @@ const Time: FC<{ hours: string; minutes: string }> = ({ hours, minutes }) => {
       {/* To Do: Center points */}
       <span>:</span>
       <span>{`${minutes}`}</span>
-      <small className="text-2xl font-medium self-end pb-2">BST</small>
     </p>
   );
 };
