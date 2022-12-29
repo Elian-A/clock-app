@@ -2,7 +2,7 @@ import { atom, useAtom } from "jotai";
 import Clock from "./components/clock/clock.component";
 import Quotes from "./components/quotes/quotes.component";
 
-export const toggleMoreInfo = atom(true);
+export const toggleMoreInfo = atom(false);
 
 function App() {
   const [infoState] = useAtom(toggleMoreInfo);
