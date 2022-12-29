@@ -12,10 +12,7 @@ const Clock: FC<{ infoState: boolean }> = ({ infoState }) => {
 
   return (
     <div>
-      <div
-        className={`flex flex-col gap-1
-      ${infoState ? "mb-7" : ""}`}
-      >
+      <div className={`flex flex-col gap-1 w-[90%] mx-auto mb-10`}>
         <Greeting hours={+hours} />
         <Time hours={hours} minutes={minutes} />
         <Location />

@@ -13,7 +13,7 @@ const Quotes = () => {
   const { body: quote, author } = data;
 
   return (
-    <div className="flex justify-between gap-2">
+    <div className="flex justify-between gap-2 w-[90%] mx-auto">
       <figure className="flex flex-col gap-2">
         <blockquote className="font-serif text-white text-lg">
           {quote}
