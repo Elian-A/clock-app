@@ -8,9 +8,8 @@ function App() {
   const [infoState] = useAtom(toggleMoreInfo);
   return (
     <main
-      className={`h-screen bg-day bg-[#7a7a7a] bg-blend-multiply bg-cover
-      pt-10
-      flex flex-col  
+      className={`pt-10 h-screen flex flex-col 
+      bg-day bg-[#7a7a7a] bg-blend-multiply bg-cover
       ${infoState ? "justify-end" : "justify-between"}`}
     >
       {infoState ? null : <Quotes />}

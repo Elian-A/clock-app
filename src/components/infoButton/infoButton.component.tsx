@@ -13,7 +13,7 @@ const InfoButton = () => {
       mt-6"
     >
       <span className="uppercase text-gray-600 text-sm tracking-widest font-bold ">
-        More
+        {infoState ? "less" : "more"}
       </span>
       <button
         className={`w-7 aspect-square bg-gray-900 text-white rounded-full 
