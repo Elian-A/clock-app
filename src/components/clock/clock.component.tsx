@@ -7,8 +7,12 @@ import Time from "../time/time.component";
 import { useClock } from "../../hooks/clock";
 import { FC } from "react";
 
-const Clock: FC<{ infoState: boolean }> = ({ infoState }) => {
+const Clock: FC<{ infoState: boolean; grabHour: any }> = ({
+  infoState,
+  grabHour,
+}) => {
   const { date, hours, minutes } = useClock();
+  grabHour(hours);
 
   return (
     <div>
