@@ -1,10 +1,16 @@
 import { useQuery } from "react-query";
+import Loading from "../loading/loading";
 import { getLocation } from "./location.api";
 
 const Location = () => {
   const { data, isLoading, isError } = useQuery("location", getLocation);
 
-  if (isLoading || !data) return <p>loading...</p>;
+  if (isLoading || !data)
+    return (
+      <div className="self-start scale-75">
+        <Loading />;
+      </div>
+    );
   if (isError) return <p>error...</p>;
 
   const { city, country_name: country, country_code: code } = data;
